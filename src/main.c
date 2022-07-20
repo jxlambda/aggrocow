@@ -76,14 +76,6 @@ int main(int argc, char *argv[])
 
 			memset(&ts, 0, sizeof(ts));
 
-			//ts = calloc(1, sizeof(struct ac_test_set));
-			//if (NULL == ts)
-			//{
-			//	fprintf(stderr, "Failed to allocate memory for test set\n");
-			//	rc = AC_OSERR;
-			//	break;
-			//}
-
 			rc = ac_test_set_from_path(path, &ts);
 			if (AC_OK != rc)
 			{
@@ -99,8 +91,6 @@ int main(int argc, char *argv[])
 						path, ac_strrc(rc));
 				break;
 			}
-
-			//free(ts);
 		}
 
 		if (AC_OK != rc)
